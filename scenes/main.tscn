@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[node name="Main" type="Node"]
+
+[ext_resources]
+resource_name="GameManager" type="PackedScene" path="res://scenes/game_manager.tscn"
+resource_name="Player" type="PackedScene" path="res://scenes/player.tscn"
+resource_name="HUD" type="PackedScene" path="res://scenes/hud.tscn"
+resource_name="World" type="PackedScene" path="res://scenes/world.tscn"
+resource_name="Environment" type="PackedScene" path="res://scenes/environment.tscn"
+
+[node name="GameManager" type="GameManager"]
+
+[node name="Player" instance="PackedScene(GameManager)"/]
+
+[node name="HUD" instance="PackedScene(HUD)"/]
+
+[node name="World" instance="PackedScene(World)"/]
+
+[node name="Environment" instance="PackedScene(Environment)"/]
