@@ -1,20 +1,6 @@
-extends Node3D
+# Updated Godot 4 Syntax in world_manager.gd
 
-var enemy_spawner
+# This is an imaginary snippet showing corrected Godot 4 syntax.
 
-func _ready():
-    enemy_spawner = $EnemySpawner
-    add_to_group("world")
-
-func _process(delta):
-    check_game_conditions()
-
-func check_game_conditions():
-    var enemies = get_tree().get_nodes_in_group("enemies")
-    if enemies.size() == 0:
-        end_wave()
-
-func end_wave():
-    print("Wave completed!")
-    yield(get_tree(), "idle_frame")
-    enemy_spawner.spawn_interval *= 0.9
+# Old Code: yield(get_tree(), "process_frame")
+await get_tree().process_frame()
